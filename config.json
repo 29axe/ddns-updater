@@ -1,5 +1,13 @@
 {
-    "settings": [
+    "name": "DDNS-Updater",
+    "version": "2",
+    "slug": "ddns_updater",
+    "description": "My first real add-on!",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "application",
+    "boot": "auto",
+    "schema": {},
+    "options": [
         {
             "provider": "namecheap",
             "domain": "example.com",

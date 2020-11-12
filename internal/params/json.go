@@ -54,10 +54,10 @@ func (r *reader) getSettingsFromEnv() (allSettings []settings.Settings, warnings
 
 func extractAllSettings(jsonBytes []byte) (allSettings []settings.Settings, warnings []string, err error) {
 	config := struct {
-		CommonSettings []commonSettings `json:"settings"`
+		CommonSettings []commonSettings `json:"options"`
 	}{}
 	rawConfig := struct {
-		Settings []json.RawMessage `json:"settings"`
+		Settings []json.RawMessage `json:"options"`
 	}{}
 	if err := json.Unmarshal(jsonBytes, &config); err != nil {
 		return nil, nil, err
